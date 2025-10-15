@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product — Cottagio</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body data-page="product">
+    <header class="container">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Cottagio Logo">
+        Cottagio
+      </div>
+      <button class="nav-toggle">Menu</button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html">Cart</a>
+        <button id="theme-toggle" class="toggle">Theme</button>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="product-hero">
+        <div id="prod-photos" style="flex:0 0 420px"></div>
+        <div class="product-info">
+          <h1 id="prod-title">Product</h1>
+          <div id="prod-price" style="font-size:1.25rem;font-weight:700;margin-bottom:8px">$0</div>
+          <p id="prod-desc" class="muted"></p>
+          <div style="margin-top:12px">
+            <label>Quantity <input id="qty" type="number" value="1" min="1" style="width:64px;margin-left:8px;padding:6px"/></label>
+            <button id="add-cart" class="btn" style="margin-left:12px">Add to cart</button>
+          </div>
+          <div style="margin-top:18px" class="seller">
+            <div>Seller</div>
+            <div id="prod-seller" style="margin-top:6px"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">© Cottagio</div>
+    </footer>
+
+    <script src="/scripts.js"></script>
+  </body>
+</html>

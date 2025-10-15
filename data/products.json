@@ -1,0 +1,48 @@
+[
+  {
+    "id": "p1",
+    "title": "Handcrafted Ceramic Vase",
+    "short": "Elegant glazed vase — perfect for flowers or decor",
+    "description": "A beautifully handcrafted ceramic vase made by local artisans. Each piece is unique. 10\" tall, food-safe glaze.",
+    "price": 45,
+    "photos": [
+      "https://images.unsplash.com/photo-1560184897-6f34b9ddb20b?w=1200&q=80",
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&q=80"
+    ],
+    "seller": {
+      "name": "Maya Crafts",
+      "phone": "+1 555-2368",
+      "location": "Portland, OR"
+    }
+  },
+  {
+    "id": "p2",
+    "title": "Woven Leather Tote",
+    "short": "Durable leather tote with internal pockets",
+    "description": "Full-grain leather, hand-stitched. Spacious interior with secure zip pocket.",
+    "price": 120,
+    "photos": [
+      "https://images.unsplash.com/photo-1490367532201-b9bc1dc483f6?w=1200&q=80"
+    ],
+    "seller": {
+      "name": "Loft Goods",
+      "phone": "+1 555-9982",
+      "location": "Austin, TX"
+    }
+  },
+  {
+    "id": "p3",
+    "title": "Organic Cotton Shirt",
+    "short": "Soft, breathable everyday shirt",
+    "description": "Made from 100% certified organic cotton. Pre-washed to reduce shrinkage. Available in multiple sizes.",
+    "price": 35,
+    "photos": [
+      "https://images.unsplash.com/photo-1520975914104-9b0a8b4a6199?w=1200&q=80"
+    ],
+    "seller": {
+      "name": "Green Stitch",
+      "phone": "+1 555-1010",
+      "location": "Boulder, CO"
+    }
+  }
+]
