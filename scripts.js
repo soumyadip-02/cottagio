@@ -1,13 +1,11 @@
 // Simple SPA-like helpers: render on pages based on body data-page attribute
-let PRODUCTS = [];
-
-async function loadProducts() {
-  try {
-    const response = await fetch('/data/products.json');
-    PRODUCTS = await response.json();
-  } catch (error) {
-    console.error('Failed to load products:', error);
-  }
+async function fetchProducts() {
+  return fetch('data/products.json')
+    .then(response => response.json())
+    .then(data => {
+      window.PRODUCTS = data;
+    })
+    .catch(error => console.error('Error loading products:', error));
 }
 
 // Simple router helper to read query param id
@@ -18,43 +16,47 @@ function getQueryParam(name){
 
 // Render home product grid
 function renderHome(){
-  const container = document.getElementById('products');
-  if(!container) return;
-  container.innerHTML = '';
-  PRODUCTS.forEach(p => {
-    const el = document.createElement('article');
-    el.className = 'card';
-    el.innerHTML = `
-      <a href="product.html?id=${p.id}"><img src="${p.photos[0]}" loading="lazy"/></a>
-      <div class="body">
-        <h3>${p.title}</h3>
-        <p class="muted">${p.short}</p>
-        <strong>₹${p.price}</strong>
-      </div>
-    `;
-    container.appendChild(el);
+  fetchProducts().then(() => {
+    const container = document.getElementById('products');
+    if(!container) return;
+    container.innerHTML = '';
+    PRODUCTS.slice(0, 3).forEach(p => {
+      const el = document.createElement('article');
+      el.className = 'card';
+      el.innerHTML = `
+        <a href="product.html?id=${p.id}"><img src="${p.photos[0]}" loading="lazy"/></a>
+        <div class="body">
+          <h3>${p.title}</h3>
+          <p class="muted">${p.short}</p>
+          <strong>₹${p.price}</strong>
+        </div>
+      `;
+      container.appendChild(el);
+    });
   });
 }
 
 // Render product page
 function renderProduct(){
-  const id = getQueryParam('id');
-  const p = PRODUCTS.find(i => i.id === id);
-  if(!p) return;
-  document.getElementById('prod-title').textContent = p.title;
-  document.getElementById('prod-price').textContent = '₹' + p.price;
-  document.getElementById('prod-desc').textContent = p.description;
-  document.getElementById('prod-seller').innerHTML = `<strong>${p.seller.name}</strong><br/>${p.seller.phone}<br/><span class="muted">${p.seller.location}</span>`;
-  const photos = document.getElementById('prod-photos');
-  photos.innerHTML = '';
-  p.photos.forEach(src => {
-    const img = document.createElement('img');
-    img.src = src;
-    img.loading = 'lazy';
-    img.style.width = '100%';
-    img.style.borderRadius = '8px';
-    img.style.marginBottom = '8px';
-    photos.appendChild(img);
+  fetchProducts().then(() => {
+    const id = getQueryParam('id');
+    const p = PRODUCTS.find(i => i.id === id);
+    if(!p) return;
+    document.getElementById('prod-title').textContent = p.title;
+    document.getElementById('prod-price').textContent = '₹' + p.price;
+    document.getElementById('prod-desc').textContent = p.description;
+    document.getElementById('prod-seller').innerHTML = `<strong>${p.seller.name}</strong><br/>${p.seller.phone}<br/><span class="muted">${p.seller.location}</span>`;
+    const photos = document.getElementById('prod-photos');
+    photos.innerHTML = '';
+    p.photos.forEach(src => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.loading = 'lazy';
+      img.style.width = '100%';
+      img.style.borderRadius = '8px';
+      img.style.marginBottom = '8px';
+      photos.appendChild(img);
+    });
   });
 }
 
@@ -84,7 +86,7 @@ function setupNavToggle() {
 
 // Init based on page
 document.addEventListener('DOMContentLoaded', async () => {
-  await loadProducts();
+  await fetchProducts();
   setupTheme();
   setupNavToggle();
   const page = document.body.dataset.page

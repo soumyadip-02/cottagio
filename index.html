@@ -29,6 +29,12 @@
       <section style="margin-top:18px">
         <div id="products" class="grid"></div>
       </section>
+
+      <section id="recent-products">
+        <h2>Recently Added</h2>
+        <div id="top-products"></div>
+        <a href="products.html" class="btn">Explore Products</a>
+      </section>
     </main>
 
     <footer>
@@ -36,5 +42,23 @@
     </footer>
 
     <script src="/scripts.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const topProductsContainer = document.getElementById('top-products');
+        const topProducts = PRODUCTS.slice(0, 3); // Get top 3 products
+        topProducts.forEach(product => {
+          const productCard = document.createElement('div');
+          productCard.className = 'product-card';
+          productCard.innerHTML = `
+            <a href="product.html?id=${product.id}">
+              <img src="${product.photos[0]}" alt="${product.title}" />
+              <h3>${product.title}</h3>
+              <p>₹${product.price}</p>
+            </a>
+          `;
+          topProductsContainer.appendChild(productCard);
+        });
+      });
+    </script>
   </body>
 </html>
