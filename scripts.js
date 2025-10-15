@@ -29,12 +29,7 @@ function renderHome(){
       <div class="body">
         <h3>${p.title}</h3>
         <p class="muted">${p.short}</p>
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
-          <strong>₹${p.price}</strong>
-          <div>
-            <a class="btn" href="product.html?id=${p.id}">View</a>
-          </div>
-        </div>
+        <strong>₹${p.price}</strong>
       </div>
     `;
     container.appendChild(el);
