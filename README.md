@@ -1,12 +1,8 @@
 # Cottagio — Static Marketplace
 
-A small static marketplace scaffold (React + Vite + Tailwind) with light/dark mode, product pages, seller contact, cart, About and Contact pages.
+A small static marketplace scaffold (HTML, CSS, JS) connecting buyers and sellers. This is not an e-commerce platform; it facilitates connections between buyers and sellers.
 
-Quick start
-
-This repository now contains a plain static site using only HTML, CSS and JavaScript (no frameworks).
-
-How to preview
+## How to preview
 
 - Option 1 (open locally): open `index.html` in your browser (best to use a local static server due to CORS/browser restrictions on modules).
 - Option 2 (quick local server with Python):
@@ -17,10 +13,7 @@ python -m http.server 8000
 # then open http://localhost:8000/index.html
 ```
 
-Notes
+## Notes
 
 - Seller contact numbers are shown on product pages (this demo has no backend or real messaging).
-- Cart is stored in localStorage and persists between reloads.
 - Theme is toggled with the Theme button and persisted to localStorage.
-# cottagio
-ones stop web solution connecting the two Cs.

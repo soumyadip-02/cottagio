@@ -11,7 +11,7 @@ export default function ProductCard({product}:{product:any}){
         <h3 className="font-semibold">{product.title}</h3>
         <p className="text-sm text-slate-600 dark:text-slate-300">{product.short}</p>
         <div className="mt-2 flex items-center justify-between">
-          <div className="font-bold">${product.price}</div>
+          <div className="font-bold">₹{product.price}</div>
           <Link to={`/product/${product.id}`} className="text-indigo-600 dark:text-indigo-400">View</Link>
         </div>
       </div>

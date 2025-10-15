@@ -1,0 +1,10 @@
+services:
+  - type: static_site
+    name: cottagio
+    env: static
+    static:
+      build:
+        commands:
+          - echo "No build step required"
+      publish:
+        directory: .
