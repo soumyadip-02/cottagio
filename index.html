@@ -2,9 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cottagio — Buyer & Seller Marketplace</title>
-    <link rel="stylesheet" href="/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cottagio  Buyer & Seller Marketplace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
   </head>
   <body data-page="home">
     <header class="container">
@@ -14,27 +17,41 @@
       </div>
       <button class="nav-toggle">Menu</button>
       <nav class="nav">
+        <a href="index.html">Home</a>
         <a href="products.html">Products</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact Us</a>
-        <button id="theme-toggle" class="toggle">Theme</button>
+        <button id="theme-toggle" class="toggle" aria-label="Toggle theme">
+          <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="icon-path" fill="currentColor"></path>
+          </svg>
+        </button>
       </nav>
     </header>
 
     <main class="container">
-      <section>
-        <h1>Discover beautiful goods from local sellers</h1>
-        <p class="muted">Buy directly from sellers. View product details, seller phone and location, and add to cart.</p>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Discover curated goods from trusted sellers</h1>
+          <p class="muted">A simple marketplace connecting local artisans and buyers. Browse, learn, and connect directly with sellers.</p>
+          <a href="products.html" class="btn large">Explore Products</a>
+        </div>
+        <div class="hero-image">
+          <img src="assets/hero.jpg" alt="Marketplace heroes" />
+        </div>
       </section>
 
-      <section style="margin-top:18px">
-        <div id="products" class="grid"></div>
-      </section>
-
-      <section id="recent-products">
-        <h2>Recently Added</h2>
-        <div id="top-products"></div>
-        <a href="products.html" class="btn">Explore Products</a>
+      <section class="features">
+        <div class="feature">
+          <img src="assets/professional-1.jpg" alt="Quality goods" />
+          <h3>Quality Assured</h3>
+          <p class="muted">Handpicked items from local vendors with clear seller details.</p>
+        </div>
+        <div class="feature">
+          <img src="assets/professional-2.jpg" alt="Direct contact" />
+          <h3>Direct Contact</h3>
+          <p class="muted">Get seller phone and location to buy or negotiate directly.</p>
+        </div>
       </section>
     </main>
 

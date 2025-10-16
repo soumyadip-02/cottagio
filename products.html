@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All Products</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="scripts.js" defer></script>
 </head>
@@ -15,14 +18,23 @@
     </div>
     <button class="nav-toggle">Menu</button>
     <nav class="nav">
+      <a href="index.html">Home</a>
       <a href="products.html">Products</a>
       <a href="about.html">About Us</a>
       <a href="contact.html">Contact Us</a>
-      <button id="theme-toggle" class="toggle">Theme</button>
+      <button id="theme-toggle" class="toggle" aria-label="Toggle theme">
+        <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path id="icon-path" fill="currentColor"></path>
+        </svg>
+      </button>
     </nav>
   </header>
   <main>
+    <div class="products-header">
+      <input type="text" id="search" placeholder="Search products by name or description" />
+    </div>
     <div id="product-list"></div>
+    <div id="products-empty" class="muted" style="display:none; padding:18px; text-align:center">No products found.</div>
   </main>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -31,17 +43,32 @@
 
       function renderProducts(filter = '') {
         container.innerHTML = '';
-        PRODUCTS.filter(product => 
+        const list = (window.PRODUCTS || []).filter(product => 
           product.title.toLowerCase().includes(filter.toLowerCase()) ||
-          product.description.toLowerCase().includes(filter.toLowerCase())
-        ).forEach(product => {
+          (product.description || '').toLowerCase().includes(filter.toLowerCase())
+        );
+
+        if(!list.length) {
+          document.getElementById('products-empty').style.display = 'block';
+          return;
+        }
+        document.getElementById('products-empty').style.display = 'none';
+
+        list.forEach(product => {
           const productCard = document.createElement('div');
           productCard.className = 'product-card';
           productCard.innerHTML = `
             <a href="product.html?id=${product.id}">
-              <img src="${product.photos[0]}" alt="${product.title}" />
-              <h2>${product.title}</h2>
-              <p>₹${product.price}</p>
+              <div class="thumb"><img src="${product.photos[0]}" alt="${product.title}" onerror="this.style.display='none'"/></div>
+              <div class="info">
+                <div>
+                  <h2>${product.title}</h2>
+                  <p class="muted">${product.short || ''}</p>
+                </div>
+                <div>
+                  <p>₹${product.price}</p>
+                </div>
+              </div>
             </a>
           `;
           container.appendChild(productCard);
@@ -52,7 +79,13 @@
         renderProducts(e.target.value);
       });
 
-      renderProducts(); // Initial render
+      // Try rendering when PRODUCTS becomes available.
+      const tryRender = () => {
+        if(window.PRODUCTS) return renderProducts();
+        // poll briefly for products loaded by scripts.js
+        setTimeout(tryRender, 200);
+      }
+      tryRender();
     });
   </script>
 </body>

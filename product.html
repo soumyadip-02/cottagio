@@ -2,9 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product — Cottagio</title>
-    <link rel="stylesheet" href="/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product  Cottagio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
   </head>
   <body data-page="product">
     <header class="container">
@@ -14,10 +17,15 @@
       </div>
       <button class="nav-toggle">Menu</button>
       <nav class="nav">
+        <a href="index.html">Home</a>
         <a href="products.html">Products</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact Us</a>
-        <button id="theme-toggle" class="toggle">Theme</button>
+        <button id="theme-toggle" class="toggle" aria-label="Toggle theme">
+          <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="icon-path" fill="currentColor"></path>
+          </svg>
+        </button>
       </nav>
     </header>
 
