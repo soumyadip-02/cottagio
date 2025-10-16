@@ -38,18 +38,45 @@ function renderHome(){
     const container = document.getElementById('products');
     if(!container) return;
     container.innerHTML = '';
-    PRODUCTS.slice(0, 3).forEach(p => {
-      const el = document.createElement('article');
-      el.className = 'card';
-      el.innerHTML = `
-        <a href="product.html?id=${p.id}"><img src="${p.photos[0]}" loading="lazy"/></a>
-        <div class="body">
-          <h3>${p.title}</h3>
-          <p class="muted">${p.short}</p>
-          <strong>₹${p.price}</strong>
+    // take top 5 products for the homepage slider
+    const top = (window.PRODUCTS || []).slice(0,5);
+    if(!top.length) return;
+
+    // create slider
+    const slider = document.createElement('div');
+    slider.className = 'slider';
+    const track = document.createElement('div');
+    track.className = 'slider-track';
+    top.forEach(p => {
+      const slide = document.createElement('div');
+      slide.className = 'slide';
+      slide.innerHTML = `
+        <div class="product-card">
+          <a href="product.html?id=${p.id}">
+            <div class="thumb"><img src="${p.photos[0]||''}" alt="${p.title}" onerror="this.style.display='none'"/></div>
+            <div class="info"><h3>${p.title}</h3><p class="muted">₹${p.price}</p></div>
+          </a>
         </div>
       `;
-      container.appendChild(el);
+      track.appendChild(slide);
+    });
+    slider.appendChild(track);
+    const controls = document.createElement('div');
+    controls.className = 'slider-controls';
+    const prev = document.createElement('button'); prev.textContent = '<';
+    const next = document.createElement('button'); next.textContent = '>';
+    controls.appendChild(prev); controls.appendChild(next);
+    container.appendChild(slider); container.appendChild(controls);
+
+    let pos = 0;
+    const step = 280; // slide width
+    prev.addEventListener('click', ()=>{
+      pos = Math.max(0, pos - step);
+      track.style.transform = `translateX(-${pos}px)`;
+    });
+    next.addEventListener('click', ()=>{
+      pos = Math.min((track.scrollWidth - slider.clientWidth), pos + step);
+      track.style.transform = `translateX(-${pos}px)`;
     });
   });
 }
@@ -63,18 +90,63 @@ function renderProduct(){
     document.getElementById('prod-title').textContent = p.title;
     document.getElementById('prod-price').textContent = '₹' + p.price;
     document.getElementById('prod-desc').textContent = p.description;
-    document.getElementById('prod-seller').innerHTML = `<strong>${p.seller.name}</strong><br/>${p.seller.phone}<br/><span class="muted">${p.seller.location}</span>`;
+    // contact seller button will show modal with seller info
+    document.getElementById('prod-seller').innerHTML = `<button id="contact-seller" class="btn">Contact Seller</button>`;
+
+    // image slideshow
     const photos = document.getElementById('prod-photos');
     photos.innerHTML = '';
-    p.photos.forEach(src => {
-      const img = document.createElement('img');
-      img.src = src;
-      img.loading = 'lazy';
-      img.style.width = '100%';
-      img.style.borderRadius = '8px';
-      img.style.marginBottom = '8px';
-      photos.appendChild(img);
-    });
+    const imgs = p.photos && p.photos.length ? p.photos : [''];
+    const wrap = document.createElement('div'); wrap.className = 'thumb';
+    const imgEl = document.createElement('img');
+    imgEl.src = imgs[0]; imgEl.loading = 'lazy'; imgEl.alt = p.title; imgEl.onerror = ()=>{imgEl.style.display='none'};
+    wrap.appendChild(imgEl);
+    if(imgs.length > 1){
+      const prev = document.createElement('button'); prev.className='ctrl prev'; prev.textContent = '<';
+      const next = document.createElement('button'); next.className='ctrl next'; next.textContent = '>';
+      wrap.appendChild(prev); wrap.appendChild(next);
+      let idx = 0;
+      prev.addEventListener('click', ()=>{
+        idx = (idx - 1 + imgs.length) % imgs.length; imgEl.src = imgs[idx];
+      });
+      next.addEventListener('click', ()=>{
+        idx = (idx + 1) % imgs.length; imgEl.src = imgs[idx];
+      });
+    }
+    photos.appendChild(wrap);
+
+    // contact modal wiring
+    const contactBtn = document.getElementById('contact-seller');
+    if(contactBtn){
+      contactBtn.addEventListener('click', ()=>{
+        showContactModal(p.seller);
+      });
+    }
+  });
+}
+
+// show contact modal without revealing info directly on page
+function showContactModal(seller){
+  const existing = document.getElementById('contact-modal');
+  if(existing) existing.remove();
+  const modal = document.createElement('div'); modal.id='contact-modal'; modal.className='modal';
+  modal.innerHTML = `
+    <div class="panel">
+      <button class="close" id="close-modal">×</button>
+      <h3>Contact Seller</h3>
+      <p class="muted">Click below to reveal contact information</p>
+      <div style="text-align:center;margin-top:12px">
+        <button id="reveal-contact" class="btn">Reveal Contact</button>
+      </div>
+      <div id="revealed" style="margin-top:12px;display:none"></div>
+    </div>
+  `;
+  document.body.appendChild(modal);
+  document.getElementById('close-modal').addEventListener('click', ()=> modal.remove());
+  document.getElementById('reveal-contact').addEventListener('click', ()=>{
+    const reveal = document.getElementById('revealed');
+    reveal.style.display = 'block';
+    reveal.innerHTML = `<strong>${seller.name}</strong><br/>Phone: <em hidden data-phone="${seller.phone}">Hidden</em><br/>Location: <em>${seller.location}</em>`;
   });
 }
 

@@ -13,6 +13,10 @@
   --accent: #ff8a65; /* Soft orange */
 }
 
+/* Theme icon color adjustments */
+.toggle svg { color: var(--muted); }
+:root.dark .toggle svg { color: #ffffff; }
+
 *{box-sizing:border-box}
 body{margin:0;font-family:'Playfair Display', Georgia, serif;background:var(--bg);color:var(--text);line-height:1.6}
 h1,h2,h3,h4{font-family:'Playfair Display', Georgia, serif;margin:0}
@@ -38,6 +42,38 @@ header{display:flex;align-items:center;justify-content:space-between;padding:16p
 .product-card .info{padding:12px;flex:1;display:flex;flex-direction:column;justify-content:space-between}
 .product-card h2{margin:8px 0 6px;font-size:1.05rem}
 .product-card p{margin:0}
+
+/* Minimalist numeric font for prices and numeric UI */
+.price{font-family:'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;font-weight:700}
+
+/* Responsive product grid */
+.product-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
+@media(min-width:1200px){
+  .product-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:1600px){
+  .product-grid{grid-template-columns:repeat(5,1fr)}
+}
+
+/* Thumb controls */
+.thumb .ctrl{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:white;border:none;padding:6px;border-radius:50%;cursor:pointer}
+.thumb{position:relative}
+.thumb .prev{left:8px}
+.thumb .next{right:8px}
+
+/* Slider for homepage */
+.slider{position:relative;overflow:hidden}
+.slider-track{display:flex;gap:12px;transition:transform 350ms ease}
+.slider .slide{flex:0 0 260px}
+.slider-controls{display:flex;gap:8px;justify-content:center;margin-top:12px}
+
+/* Ad slot */
+.ad-slot{border:2px dashed rgba(0,0,0,0.08);padding:12px;border-radius:8px;text-align:center;color:var(--muted);background:rgba(255,255,255,0.02);margin:12px 0}
+
+/* Modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:2000}
+.modal .panel{background:var(--card);padding:18px;border-radius:10px;max-width:420px;width:90%}
+.modal .close{float:right;border:none;background:transparent;font-size:1.2rem}
 
 .product-hero{display:flex;gap:20px;align-items:flex-start}
 .product-hero img{width:420px;height:320px;object-fit:cover;border-radius:10px}
