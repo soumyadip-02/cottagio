@@ -43,14 +43,48 @@
 
       <section class="features">
         <div class="feature">
-          <img src="assets/professional-1.jpg" alt="Quality goods" />
+          <div class="image-container" style="height:160px">
+            <img src="assets/professional-1.jpg" alt="Quality goods" onerror="this.style.display='none'"/>
+            <div class="img-fallback" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L3 7v7c0 5 4 8 9 8s9-3 9-8V7l-9-5z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Quality goods
+            </div>
+          </div>
           <h3>Quality Assured</h3>
           <p class="muted">Handpicked items from local vendors with clear seller details.</p>
         </div>
         <div class="feature">
-          <img src="assets/professional-2.jpg" alt="Direct contact" />
+          <div class="image-container" style="height:160px">
+            <img src="assets/professional-2.jpg" alt="Direct contact" onerror="this.style.display='none'"/>
+            <div class="img-fallback" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 15v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 10l5-5 5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              Direct contact
+            </div>
+          </div>
           <h3>Direct Contact</h3>
           <p class="muted">Get seller phone and location to buy or negotiate directly.</p>
+        </div>
+      </section>
+      <!-- Parallax section with AI-generated traditional handmade object background and flowing text -->
+      <section class="parallax-hero" aria-label="Traditional handmade object background">
+        <!-- Parallax background element (animated via JS for smooth effect) -->
+        <div class="parallax-bg" aria-hidden="true"></div>
+        <div class="parallax-overlay container">
+          <div class="parallax-card">
+            <h2>Traditional Crafts, Reimagined</h2>
+            <p class="muted">Discover handcrafted objects from artisans who keep centuries-old techniques alive. Each piece is unique and made with care.</p>
+            <div class="flow-text">
+              <p>Explore curated categories like pottery, handwoven textiles, carved woodwork, and traditional jewelry. Learn the story behind each maker and support local craftsmanship.</p>
+            </div>
+            <a href="products.html" class="btn">Browse handcrafted goods</a>
+          </div>
+          <div class="parallax-card" aria-hidden="false">
+            <h2>Behind the design</h2>
+            <p class="muted">We use imagery inspired by traditional motifs — the background here uses an AI-generated depiction of a handmade object to evoke texture and depth.</p>
+            <div class="flow-text">
+              <p>Even when images fail to load, the layout preserves meaning through descriptive text and fallback graphics, ensuring accessibility and consistent presentation.</p>
+            </div>
+          </div>
         </div>
       </section>
       <div class="ad-slot">Ad placeholder — your ad here</div>

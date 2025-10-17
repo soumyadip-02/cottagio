@@ -156,7 +156,7 @@ footer{padding:24px 0;color:var(--muted);text-align:center}
 
 /* Parallax hero section */
 .parallax-hero{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;color:var(--card);min-height:420px}
-.parallax-hero::before{content:'';position:absolute;inset:0;background-image:url('assets/parallax.jpg');background-size:cover;background-position:center fixed;filter:contrast(0.95) saturate(1.05) blur(0.4px);transform:translateZ(0);z-index:0}
+.parallax-bg{position:absolute;inset:0;background-image:url('assets/parallax.jpg');background-size:cover;background-position:center;will-change:transform;transform:translateZ(0);z-index:0;filter:contrast(0.95) saturate(1.05) blur(0.4px)}
 .parallax-overlay{position:relative;z-index:2;max-width:1100px;padding:60px 20px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
 .parallax-card{background:linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.82));color:var(--text);padding:20px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.12)}
 .parallax-card h2{margin-bottom:12px}
@@ -174,7 +174,12 @@ footer{padding:24px 0;color:var(--muted);text-align:center}
 .image-container .img-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--muted);padding:12px;text-align:center}
 .image-container .img-fallback svg{width:48px;height:48px;opacity:0.85;margin-bottom:8px}
 
-/* Decorative helper: ensure background stays fixed for large screens but not on mobile to avoid jank */
+/* Reduced-motion: disable parallax for users who prefer no motion */
+@media (prefers-reduced-motion: reduce){
+  .parallax-bg{transform:none!important}
+}
+
+/* Mobile fallback: remove transform-based parallax to avoid jank */
 @media (max-width: 1024px){
-  .parallax-hero::before{background-attachment:scroll}
+  .parallax-bg{background-attachment:scroll;filter:none}
 }

@@ -224,3 +224,35 @@ function applyNumericStyling(root = document.body){
 
 // Run after small delay so dynamic content (products) can render
 setTimeout(()=> applyNumericStyling(document.body), 500);
+
+// Lightweight parallax handler for .parallax-bg
+function setupParallax(){
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  // disable on touch devices to avoid jank
+  if('ontouchstart' in window) return;
+  const bg = document.querySelector('.parallax-bg');
+  if(!bg) return;
+
+  let ticking = false;
+  function onScroll(){
+    if(ticking) return;
+    ticking = true;
+    requestAnimationFrame(()=>{
+      const rect = bg.getBoundingClientRect();
+      const winH = window.innerHeight;
+      // compute offset relative to viewport centre
+      const pct = (rect.top + rect.height/2 - winH/2) / winH;
+      // small translate for subtle parallax
+      const max = 60; // px
+      const y = Math.max(-max, Math.min(max, -pct * max));
+      bg.style.transform = `translate3d(0, ${y}px, 0) scale(1.02)`;
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  // run once to position
+  onScroll();
+}
+
+// init parallax after DOM ready
+document.addEventListener('DOMContentLoaded', ()=> setTimeout(setupParallax, 150));
