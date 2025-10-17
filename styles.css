@@ -46,14 +46,45 @@ header{display:flex;align-items:center;justify-content:space-between;padding:16p
 /* Minimalist numeric font for prices and numeric UI */
 .price{font-family:'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;font-weight:700}
 
-/* Responsive product grid */
-.product-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
-@media(min-width:1200px){
-  .product-grid{grid-template-columns:repeat(3,1fr)}
+/* Responsive product grid
+   Behavior requested:
+   - Mobile: 1 card per row
+   - Desktop: 2 cards per row
+   - Large / TV: many cards auto-fit depending on available width
+   Cards will have a preferred pixel width but the grid will auto-fit.
+*/
+.product-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));align-items:start}
+
+/* Small devices (mobile) - 1 card */
+@media (max-width:599px){
+  .product-grid{grid-template-columns:repeat(1,1fr)}
+  .product-card .thumb{height:200px}
 }
-@media(min-width:1600px){
-  .product-grid{grid-template-columns:repeat(5,1fr)}
+
+/* Medium devices (tablet / small desktop) - 2 cards */
+@media (min-width:600px) and (max-width:1199px){
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .product-card .thumb{height:220px}
 }
+
+/* Large desktop - auto-fit more cards */
+@media (min-width:1200px) and (max-width:1599px){
+  .product-grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .product-card .thumb{height:240px}
+}
+
+/* Very large / TV screens - show many cards */
+@media (min-width:1600px){
+  .product-grid{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .product-card .thumb{height:260px}
+}
+
+/* Card visual tweaks to keep consistent size and spacing */
+.product-card{display:flex;flex-direction:column;min-width:0}
+.product-link{color:inherit;text-decoration:none;display:flex;flex-direction:column;flex:1}
+.product-card .info{padding:12px;display:flex;justify-content:space-between;gap:8px}
+.product-card .short{font-size:0.9rem;color:var(--muted)}
+.price{font-weight:700}
 
 /* Thumb controls */
 .thumb .ctrl{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:white;border:none;padding:6px;border-radius:50%;cursor:pointer}

@@ -11,29 +11,29 @@
   <script src="scripts.js" defer></script>
 </head>
 <body>
-  <header>
-    <div class="brand">
-      <img src="assets/logo.png" alt="Cottagio Logo">
-      Cottagio
-    </div>
-    <button class="nav-toggle">Menu</button>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact Us</a>
-      <button id="theme-toggle" class="toggle" aria-label="Toggle theme">
-        <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path id="icon-path" fill="currentColor"></path>
-        </svg>
-      </button>
-    </nav>
-  </header>
+ <header class="container">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Cottagio Logo">
+        COTTAGIO
+      </div>
+      <button class="nav-toggle">Menu</button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <button id="theme-toggle" class="toggle" aria-label="Toggle theme">
+          <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="icon-path" fill="currentColor"></path>
+          </svg>
+        </button>
+      </nav>
+    </header>
   <main>
     <div class="products-header">
       <input type="text" id="search" placeholder="Search products by name or description" />
     </div>
-    <div id="product-list"></div>
+  <div id="product-list" class="product-grid"></div>
     <div id="products-empty" class="muted" style="display:none; padding:18px; text-align:center">No products found.</div>
   </main>
   <div class="ad-slot">Ad placeholder — your ad here</div>
@@ -57,18 +57,18 @@
         document.getElementById('products-empty').style.display = 'none';
 
         list.forEach(product => {
-          const productCard = document.createElement('div');
+          const productCard = document.createElement('article');
           productCard.className = 'product-card';
           productCard.innerHTML = `
-            <a href="product.html?id=${product.id}">
+            <a href="product.html?id=${product.id}" class="product-link">
               <div class="thumb"><img src="${product.photos[0]}" alt="${product.title}" onerror="this.style.display='none'"/></div>
               <div class="info">
                 <div>
                   <h2>${product.title}</h2>
-                  <p class="muted">${product.short || ''}</p>
+                  <p class="muted short">${product.short || ''}</p>
                 </div>
                 <div>
-                  <p>₹${product.price}</p>
+                  <p class="price">₹${product.price}</p>
                 </div>
               </div>
             </a>
