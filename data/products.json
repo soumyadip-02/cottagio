@@ -5,7 +5,7 @@
     "title": "",
     "short": "",
     "description": "",
-    "price": ""
+    "price": 
     "photos": [
       ""
     ],
@@ -20,7 +20,7 @@
     "title": "Handcrafted Ceramic Vase",
     "short": "Elegant glazed vase — perfect for flowers or decor",
     "description": "A beautifully handcrafted ceramic vase made by local artisans. Each piece is unique. 10\" tall, food-safe glaze.",
-    "price": "2345"
+    "price": 2345
     "photos": [
       "https://images.unsplash.com/photo-1560184897-6f34b9ddb20b?w=1200&q=80",
       "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&q=80"
@@ -36,6 +36,7 @@
     "title": "Woven Leather Tote",
     "short": "Durable leather tote with internal pockets",
     "description": "Full-grain leather, hand-stitched. Spacious interior with secure zip pocket.",
+    "price": 2345
     "photos": [
       "https://images.unsplash.com/photo-1490367532201-b9bc1dc483f6?w=1200&q=80"
     ],
@@ -50,7 +51,7 @@
     "title": "Organic Cotton Shirt",
     "short": "Soft, breathable everyday shirt",
     "description": "Made from 100% certified organic cotton. Pre-washed to reduce shrinkage. Available in multiple sizes.",
-    "price": "2345"
+    "price": 2345
     "photos": [
       "https://images.unsplash.com/photo-1520975914104-9b0a8b4a6199?w=1200&q=80"
     ],
