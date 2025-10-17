@@ -1,4 +1,4 @@
-[
+[ 
   {
     "id": "",
     "title": "",
@@ -6,7 +6,20 @@
     "description": "",
     "price": ""
     "photos": [
-      "",
+      ""
+    ],
+    "seller": {
+      "name": "",
+      "phone": "",
+      "location": ""
+    }
+  {
+    "id": "",
+    "title": "",
+    "short": "",
+    "description": "",
+    "price": ""
+    "photos": [
       ""
     ],
     "seller": {
