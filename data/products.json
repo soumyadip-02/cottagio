@@ -7,7 +7,8 @@
     "price": 2900,
     "photos": [
       "https://images.unsplash.com/photo-1520975914104-9b0a8b4a6199?w=1200&q=80"
-    ], {
+    ], 
+  {
     "id": "p1",
     "title": "Handcrafted Ceramic Vase",
     "short": "Elegant glazed vase — perfect for flowers or decor",
