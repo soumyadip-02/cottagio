@@ -192,3 +192,35 @@ document.addEventListener('DOMContentLoaded', async () => {
   if(page === 'home') renderHome()
   if(page === 'product') renderProduct()
 })
+
+// Wrap numeric sequences in spans.numeric across the document
+// This keeps digits styled consistently (e.g., using Roboto Mono)
+function applyNumericStyling(root = document.body){
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+  const textNodes = [];
+  while(walker.nextNode()) textNodes.push(walker.currentNode);
+
+  const digitRegex = /\d[\d,\.\s]*/g;
+  textNodes.forEach(node => {
+    // Skip empty or whitespace-only nodes
+    if(!node.nodeValue || !node.nodeValue.trim()) return;
+    // Skip if parent is input, textarea, code, pre or already inside .numeric
+    const p = node.parentElement;
+    if(!p) return;
+    const tag = p.tagName && p.tagName.toLowerCase();
+    if(['input','textarea','code','pre','script','style'].includes(tag)) return;
+    if(p.closest && p.closest('.numeric')) return;
+
+    if(digitRegex.test(node.nodeValue)){
+      const span = document.createElement('span');
+      // Replace numeric sequences with spans
+      span.innerHTML = node.nodeValue.replace(digitRegex, (match)=>{
+        return `<span class="numeric">${match}</span>`;
+      });
+      node.parentNode.replaceChild(span, node);
+    }
+  });
+}
+
+// Run after small delay so dynamic content (products) can render
+setTimeout(()=> applyNumericStyling(document.body), 500);
