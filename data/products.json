@@ -4,7 +4,22 @@
     "title": "",
     "short": "",
     "description": "",
-    "price": ,
+    "price": ₹,
+    "photos": [
+      "",
+    ],
+    "seller": {
+      "name": "",
+      "phone": "",
+      "location": "",
+    }
+  },
+  { 
+    "id": "p4",
+    "title": "Hand painted TERRACOTTA/CLAY pots",
+    "short": "Clay/terracotta pots, painted designs.",
+    "description": "A vibrant roadside stall in Rajdanga offering beautifully hand-painted terracotta pots and planters crafted by local artisans.",
+    "price": ₹150,
     "photos": [
       "",
     ],
