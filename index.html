@@ -8,75 +8,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-
-  <!-- Page-specific adjustments: center and enlarge hero CTA, and add spacing between hero and features -->
-  <style>
-    /* Center hero content and CTA, add vertical spacing */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      padding-bottom: 1.5rem; /* extra breathing room below the hero */
-    }
-
-    /* Make text centered within the hero column layout */
-    .hero .hero-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 0.75rem;
-    }
-
-    /* Center and enlarge the CTA button specifically in the hero */
-    .hero-cta {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-    }
-    .hero-cta .btn {
-      padding: 14px 28px;
-      font-size: 1.25rem;
-      border-radius: 8px;
-      min-width: 220px;
-    }
-
-    /* Ensure some space between the hero content/button and the hero image on small screens */
-    .hero .image-container {
-      margin-top: 0.75rem;
-    }
-
-    /* Layout for wider screens: place hero content and image side-by-side and add left spacing to image */
-    @media (min-width: 840px) {
-      .hero {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .hero .hero-content {
-        flex: 1 1 55%;
-        align-items: flex-start;
-        text-align: left;
-      }
-      /* push the image a bit away from the content */
-      .hero .image-container {
-        flex: 0 0 320px;
-        margin-left: 2rem;
-        margin-top: 0;
-      }
-      /* center the button in the hero-content area on wide screens */
-      .hero .hero-content .hero-cta {
-        justify-content: flex-start;
-      }
-      /* if you prefer the button to remain centered on wide screens, change justify-content above to center */
-    }
-
-    /* Add extra spacing between the bottom of the hero and the features section */
-    .features {
-      margin-top: 2rem;
-    }
-  </style>
   </head>
   <body data-page="home">
     <header class="container">
@@ -104,13 +35,8 @@
         <div class="hero-content">
           <h1>Discover curated goods from trusted sellers</h1>
           <p class="muted">A simple marketplace connecting local artisans and buyers. Browse, learn, and connect directly with sellers.</p>
-
-          <!-- Wrapped CTA for easier centering and sizing -->
-          <div class="hero-cta">
-            <a href="products.html" class="btn large">Explore Products</a>
-          </div>
+          <a center href="products.html"  class="btn large">Explore Products</a>
         </div>
-
         <div class="image-container" style="height:160px">
             <img src="assets/hero.png" alt="Hero Image" onerror="this.style.display='none'"/>
         </div>
@@ -122,7 +48,7 @@
           <div class="image-container" style="height:160px">
             <img src="assets/professional-1.jpg" alt="Quality goods" onerror="this.style.display='none'"/>
             <div class="img-fallback" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L3 7v7c0 5 4 8 9 8s9-3 9-8V7l-9-5z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" [...]
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L3 7v7c0 5 4 8 9 8s9-3 9-8V7l-9-5z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               Quality goods
             </div>
           </div>
@@ -133,7 +59,7 @@
           <div class="image-container" style="height:160px">
             <img src="assets/professional-2.jpg" alt="Direct contact" onerror="this.style.display='none'"/>
             <div class="img-fallback" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 15v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round[...]
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 15v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 10l5-5 5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
               Direct contact
             </div>
           </div>
@@ -169,4 +95,4 @@
       });
     </script>
   </body>
-         </html>
+</html>
