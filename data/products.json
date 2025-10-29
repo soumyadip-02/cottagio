@@ -15,6 +15,21 @@
     }
   },
   { 
+    "id": "p6",
+    "title": "SITALA POT SUPPLIER",
+    "short": "Curved by hand, Varitey in shapes and sizes",
+    "description": "Small pottery workshop offering kitchen & decorative earthenware.",
+    "price": "₹150 onwards",
+    "photos": [
+      "https://lh3.googleusercontent.com/p/AF1QipN93asjICA6gMLzLXQzxtzWGz6MRr4wBkK7glqA=w408-h306-k-no",
+    ],
+    "seller": {
+      "name": "Saheb",
+      "phone": "+91 79800 27023",
+      "location": "Thakurpukur - Bibirhat - Bakhrahat - Raipur Rd, Chak Manik, Muchisha, Raypur, West Bengal 743377",
+    }
+  },
+  { 
     "id": "p5",
     "title": "Earthen Pot Dealer",
     "short": "Uniquely designed, colorful",
