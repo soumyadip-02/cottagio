@@ -15,6 +15,21 @@
     }
   },
   { 
+    "id": "p7",
+    "title": "PINTU ERTH POT SHOP",
+    "short": "decorative erthenwares",
+    "description": "Good looking pots, Can be used as home decoration, also great for storing various items",
+    "price": "₹300",
+    "photos": [
+      "https://www.google.com/maps/place/PINTU+ERTH+POT+SHOP/@22.5034828,88.3431436,3a,75y,25.21h,90t/data=!3m7!1e1!3m5!1sOMJlNd-jL_zt_g0SRwmJ9g!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DOMJlNd-jL_zt_g0SRwmJ9g%26yaw%3D25.214735!7i13312!8i6656!4m11!1m2!2m1!1searthen+pot!3m7!1s0x3a02710b6108f8cf:0x7419bba1de9f6905!8m2!3d22.5035344!4d88.3431949!10e5!15sCgtlYXJ0aGVuIHBvdFoNIgtlYXJ0aGVuIHBvdJIBDWdlbmVyYWxfc3RvcmWaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVTkNlV1IxVDJ4UlJSQUKqAUUQASoPIgtlYXJ0aGVuIHBvdCgAMh8QASIbCxW0TKcx8PLqQuU0xQbnn8PV3J0_XqjZ-a4IMg8QAiILZWFydGhlbiBwb3TgAQD6AQQIABAR!16s%2Fg%2F11tnnpbk6r?entry=ttu&g_ep=EgoyMDI1MTAyNi4wIKXMDSoASAFQAw%3D%3D#",
+    ],
+    "seller": {
+      "name": "Pintu Ghorui",
+      "phone": "+91 89727 67510",
+      "location": "9, Tollygunge Circular Rd, Tollygunge, Kolkata, West Bengal 700033",
+    }
+  },
+  { 
     "id": "p6",
     "title": "SITALA POT SUPPLIER",
     "short": "Curved by hand, Varitey in shapes and sizes",
