@@ -15,6 +15,29 @@
     }
   },
   { 
+    "id": "p8",
+    "title": "Handcrafted Torans",
+    "short": "Handcrafted decorative toran for elegant festive home décor.",
+    "description": "Beautifully handcrafted torans designed by local artisans, featuring colorful beads and threads that add a festive touch and welcoming charm to your home entrance.",
+    "price": "₹700-800",
+    "photos": [
+      "https://drive.google.com/open?id=13905xXtlFkQxws3WoV5_mVEbQOVtIvvu", 
+      "https://drive.google.com/open?id=1ITVuSNHzGXcz7gJlK7QyZPih9bJmKfXN", 
+      "https://drive.google.com/open?id=1pr6N1kdnrxY96CsTI8xgAmolog1limQ1", 
+      "https://drive.google.com/open?id=1RyEGj9hoV-CXNIr1-R1ntOG-rJsuq6by", 
+      "https://drive.google.com/open?id=1MsBerwesQibxhWDSONbIfZ5xFrzbg_IU", 
+      "https://drive.google.com/open?id=1HLxQqU8hy-VII4kSTMXu_t7oyDsl0T1N", 
+      "https://drive.google.com/open?id=1_TDfRpxn78Jm2ACLssNwByf3av2Wfldv", 
+      "https://drive.google.com/open?id=1qXDE6wjm1wLqKBwyR9LOd2qRtxBCKX0k", 
+      "https://drive.google.com/open?id=1XZLn-DSkVGJGI3w3ipiu9nazM9rSE2MY",
+    ],
+    "seller": {
+      "name": "Bhalotia sales",
+      "phone": "+91 86373 85423",
+      "location": "Munshi bazaar,Asansol",
+    }
+  },
+  { 
     "id": "p7",
     "title": "PINTU ERTH POT SHOP",
     "short": "decorative erthenwares",
