@@ -15,6 +15,22 @@
     }
   },
   { 
+    "id": "p5",
+    "title": "Earthen Pot Dealer",
+    "short": "Uniquely designed, colorful",
+    "description": "A traditional art of crafting earthen pots, matkas and clay cookwares that preserve Bengal`s rich rural pottery heritage",
+    "price": 100 onwards,
+    "photos": [
+      "https://content.jdmagicbox.com/v2/comp/kolkata/p9/033pxx33.xx33.090706092951.d2p9/catalogue/ganesh-trading-company-hatkhola-kolkata-earthen-pot-manufacturers-2kmdars-250.jpg",
+      "https://content.jdmagicbox.com/v2/comp/chennai/g8/044pxx44.xx44.210310111620.g8g8/catalogue/-d5ynaqkpvx.jpg",
+    ],
+    "seller": {
+      "name": "Bhima Chandra Das",
+      "phone": "Not listed",
+      "location": "Bonmali Sarkar Street, Hatkhola, Barasat, Kolkata region.",
+    }
+  },
+  { 
     "id": "p4",
     "title": "Hand painted TERRACOTTA/CLAY pots",
     "short": "Clay/terracotta pots, painted designs.",
