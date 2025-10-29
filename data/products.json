@@ -15,6 +15,25 @@
     }
   },
   { 
+    "id": "p9",
+    "title": "Lippan art decoratives",
+    "short": "“Handcrafted Lippan art wall décor made with mirrors and clay for a traditional charm.”",
+    "description": "A stunning piece of handcrafted Lippan art created by skilled artisans using clay and mirrors. Each artwork reflects the rich heritage of Kutch, bringing warmth, texture, and traditional elegance to your home décor.",
+    "price": "₹800-1000",
+    "photos": [
+      "https://drive.google.com/open?id=1m5z5pEKup4H1_fjQTG72NirrQrFVejSO", 
+      "https://drive.google.com/open?id=1MgADkU4MqctXiEgp-VDbNhKulkycO5kD", 
+      "https://drive.google.com/open?id=1xWhRFRaJ5zqjNGu2eDA20nxwUWus8znb", 
+      "https://drive.google.com/open?id=167SX9ZB9faNt8kbkXwxRtJ4ZoBdUhnXY", 
+      "https://drive.google.com/open?id=1yBnyvja0GkwkF7fpw7RDTh1MKAGt9ULt", 
+      "https://drive.google.com/open?id=1BdR0lbI3zQ2AJsIXgQixWfARf3xsuZIQ",
+    ],
+    "seller": {
+      "name": "Lippan Beauty",
+      "phone": "+91 94381 14556",
+      "location": "Park Street, Kolkata",
+  },
+  { 
     "id": "p8",
     "title": "Handcrafted Torans",
     "short": "Handcrafted decorative toran for elegant festive home décor.",
