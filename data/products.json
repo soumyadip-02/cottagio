@@ -15,6 +15,21 @@
     }
   },
   { 
+    "id": "p10",
+    "title": "A handcrafted dream catcher ",
+    "short": "“Handcrafted dream catcher to bring positivity and peaceful dreams to your space.”",
+    "description": "A beautifully handcrafted dream catcher made with delicate threads. Inspired by traditional designs, it’s perfect for adding a touch of boho charm while filtering out negative energy and welcoming peaceful dreams.",
+    "price": "₹800",
+    "photos": [
+      "https://lh3.google.com/u/1/d/1GnHhm_8XpuoNq3TxfxK0EJv9utnN6PRY=k",
+    ],
+    "seller": {
+      "name": "Lippan beauty sales",
+      "phone": "+91 94381 14556",
+      "location": "Park Street, Kolkata",
+    }
+  },
+  { 
     "id": "p9",
     "title": "Lippan art decoratives",
     "short": "“Handcrafted Lippan art wall décor made with mirrors and clay for a traditional charm.”",
