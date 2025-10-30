@@ -21,12 +21,8 @@
     "description": "A stunning piece of handcrafted Lippan art created by skilled artisans using clay and mirrors. Each artwork reflects the rich heritage of Kutch, bringing warmth, texture, and tradition to your home.",
     "price": "800-1000",
     "photos": [
-      "https://drive.google.com/open?id=1m5z5pEKup4H1_fjQTG72NirrQrFVejSO",
-      "https://drive.google.com/open?id=1MgADkU4MqctXiEgp-VDbNhKulkycO5kD",
-      "https://drive.google.com/open?id=1xWhRFRaJ5zqjNGu2eDA20nxwUWus8znb",
-      "https://drive.google.com/open?id=167SX9ZB9faNt8kbkXwxRtJ4ZoBdUhnXY",
-      "https://drive.google.com/open?id=1yBnyvja0GkwkF7fpw7RDTh1MKAGt9ULt",
-      "https://drive.google.com/open?id=1BdR0lbI3zQ2AJsIXgQixWfARf3xsuZIQ"
+      "https://raw.githubusercontent.com/soumyadip-02/cottagio/main/assets/photos/p9i.jpeg",
+      "https://raw.githubusercontent.com/soumyadip-02/cottagio/main/assets/photos/p9ii.jpeg"
     ],
     "seller": {
       "name": "Lippan Beauty",
