@@ -130,11 +130,16 @@ function showContactModal(seller){
   const existing = document.getElementById('contact-modal');
   if(existing) existing.remove();
   const modal = document.createElement('div'); modal.id='contact-modal'; modal.className='modal';
+  // seller.location is shown immediately (not hidden). Phone is revealed after clicking the button.
   modal.innerHTML = `
     <div class="panel">
       <button class="close" id="close-modal">×</button>
       <h3>Contact Seller</h3>
-      <p class="muted">Click below to reveal contact information</p>
+      <p class="muted">Click below to reveal the seller phone number</p>
+      <div style="margin-top:12px">
+        <strong id="seller-name">${seller && seller.name ? seller.name : 'Seller'}</strong><br/>
+        <div id="seller-location" style="margin-top:8px">Location: <em>${seller && seller.location ? seller.location : 'Not listed'}</em></div>
+      </div>
       <div style="text-align:center;margin-top:12px">
         <button id="reveal-contact" class="btn">Reveal Contact</button>
       </div>
@@ -146,7 +151,13 @@ function showContactModal(seller){
   document.getElementById('reveal-contact').addEventListener('click', ()=>{
     const reveal = document.getElementById('revealed');
     reveal.style.display = 'block';
-    reveal.innerHTML = `<strong>${seller.name}</strong><br/>Phone: <em hidden data-phone="${seller.phone}">Hidden</em><br/>Location: <em>${seller.location}</em>`;
+    const phone = seller && seller.phone ? seller.phone : 'Not listed';
+    // render phone as clickable link if available
+    if(phone && phone.toLowerCase() !== 'not listed') {
+      reveal.innerHTML = `Phone: <a href="tel:${phone.replace(/\s+/g,'')}" class="btn-link">${phone}</a>`;
+    } else {
+      reveal.innerHTML = `Phone: <em>${phone}</em>`;
+    }
   });
 }
 
@@ -156,7 +167,7 @@ function setupTheme(){
   const iconPath = document.getElementById('icon-path')
   const root = document.documentElement
   const cur = localStorage.getItem('cottagio_theme') || 'light'
-  const SUN_PATH = 'M12 4.354a1 1 0 011 1V7.5a1 1 0 11-2 0V5.354a1 1 0 011-1zM4.222 6.343a1 1 0 011.415 0l1.06 1.06a1 1 0 11-1.415 1.414L4.222 7.757a1 1 0 010-1.414zM18.364 6.343a1 1 0 010 1.414l-1.06 1.06a1 1 0 11-1.415-1.414l1.06-1.06a1 1 0 011.415 0zM12 16.5a4.5 4.5 0 100-9 4.5 4.5 0 000 9zm7.5-4.5a1 1 0 011 1H19.5a1 1 0 110-2h1.999a1 1 0 011 1zM6 12a1 1 0 011-1H4.5a1 1 0 110 2H7a1 1 0 01-1-1zM17.778 17.657a1 1 0 01-1.415 0l-1.06-1.06a1 1 0 011.415-1.414l1.06 1.06a1 1 0 010 1.414zM6.636 17.657a1 1 0 000-1.414l1.06-1.06a1 1 0 111.415 1.414l-1.06 1.06a1 1 0 01-1.415 0z'
+  const SUN_PATH = 'M12 4.354a1 1 0 011 1V7.5a1 1 0 11-2 0V5.354a1 1 0 011-1zM4.222 6.343a1 1 0 011.415 0l1.06 1.06a1 1 0 11-1.415 1.414L4.222 7.757a1 1 0 010-1.414zM18.364 6.343a1 1 0 010 1.414l-1.06[...]'
   const MOON_PATH = 'M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z'
   if(cur === 'dark') root.classList.add('dark')
   // set initial icon
