@@ -1,20 +1,5 @@
 [ 
   {
-    "id": "",
-    "title": "",
-    "short": ".",
-    "description": "",
-    "price": "",
-    "photos": [
-      ""
-    ],
-    "seller": {
-      "name": "",
-      "phone": "",
-      "location": ""
-    }
-  },
-  {
     "id": "p11",
     "title": "Tant Ghar",
     "short": "Exclusive tant products",
