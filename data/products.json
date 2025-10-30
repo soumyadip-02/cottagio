@@ -1,4 +1,34 @@
-[
+[ 
+  {
+    "id": "",
+    "title": "",
+    "short": ".",
+    "description": "",
+    "price": "",
+    "photos": [
+      ""
+    ],
+    "seller": {
+      "name": "",
+      "phone": "",
+      "location": ""
+    }
+  },
+  {
+    "id": "p11",
+    "title": "Tant Ghar",
+    "short": "Exclusive tant products",
+    "description": "One of reliable clothes stores in Dakshinapan. Their collection is good and staff behavior is excellent. They are helpful to find the best thing for you. Good collection of ladies sarees, Kurtis and salwaars.",
+    "price": "₹2000 onwards",
+    "photos": [
+      "https://raw.githubusercontent.com/soumyadip-02/cottagio/main/assets/photos/p11.jpeg"
+    ],
+    "seller": {
+      "name": "Asutosh Majee",
+      "phone": "+91 33242 37617",
+      "location": "Shop No G-1, Dakshinapan K.I.T. Complex, 2, Gariahat Rd S, Dhakuria, Jodhpur Park, Kolkata, West Bengal 700068"
+    }
+  },
   {
     "id": "p10",
     "title": "A handcrafted dream catcher",
