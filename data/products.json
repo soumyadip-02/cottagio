@@ -1,181 +1,121 @@
-[ 
-  { 
-    "id": "",
-    "title": "",
-    "short": "",
-    "description": "",
-    "price": "₹",
-    "photos": [
-      "",
-    ],
-    "seller": {
-      "name": "",
-      "phone": "",
-      "location": "",
-    }
-  },
-  { 
+[
+  {
     "id": "p10",
-    "title": "A handcrafted dream catcher ",
-    "short": "“Handcrafted dream catcher to bring positivity and peaceful dreams to your space.”",
-    "description": "A beautifully handcrafted dream catcher made with delicate threads. Inspired by traditional designs, it’s perfect for adding a touch of boho charm while filtering out negative energy and welcoming peaceful dreams.",
+    "title": "A handcrafted dream catcher",
+    "short": "Handcrafted dream catcher to bring positivity and peaceful dreams to your space.",
+    "description": "A beautifully handcrafted dream catcher made with delicate threads. Inspired by traditional designs, it’s perfect for adding a touch of boho charm while filtering out negative energy.",
     "price": "₹800",
     "photos": [
-      "https://lh3.google.com/u/1/d/1GnHhm_8XpuoNq3TxfxK0EJv9utnN6PRY=k",
+      "https://lh3.google.com/u/1/d/1GnHhm_8XpuoNq3TxfxK0EJv9utnN6PRY=k"
     ],
     "seller": {
       "name": "Lippan beauty sales",
       "phone": "+91 94381 14556",
-      "location": "Park Street, Kolkata",
+      "location": "Park Street, Kolkata"
     }
   },
-  { 
+  {
     "id": "p9",
     "title": "Lippan art decoratives",
-    "short": "“Handcrafted Lippan art wall décor made with mirrors and clay for a traditional charm.”",
-    "description": "A stunning piece of handcrafted Lippan art created by skilled artisans using clay and mirrors. Each artwork reflects the rich heritage of Kutch, bringing warmth, texture, and traditional elegance to your home décor.",
+    "short": "Handcrafted Lippan art wall décor made with mirrors and clay for a traditional charm.",
+    "description": "A stunning piece of handcrafted Lippan art created by skilled artisans using clay and mirrors. Each artwork reflects the rich heritage of Kutch, bringing warmth, texture, and tradition to your home.",
     "price": "₹800-1000",
     "photos": [
-      "https://drive.google.com/open?id=1m5z5pEKup4H1_fjQTG72NirrQrFVejSO", 
-      "https://drive.google.com/open?id=1MgADkU4MqctXiEgp-VDbNhKulkycO5kD", 
-      "https://drive.google.com/open?id=1xWhRFRaJ5zqjNGu2eDA20nxwUWus8znb", 
-      "https://drive.google.com/open?id=167SX9ZB9faNt8kbkXwxRtJ4ZoBdUhnXY", 
-      "https://drive.google.com/open?id=1yBnyvja0GkwkF7fpw7RDTh1MKAGt9ULt", 
-      "https://drive.google.com/open?id=1BdR0lbI3zQ2AJsIXgQixWfARf3xsuZIQ",
+      "https://drive.google.com/open?id=1m5z5pEKup4H1_fjQTG72NirrQrFVejSO",
+      "https://drive.google.com/open?id=1MgADkU4MqctXiEgp-VDbNhKulkycO5kD",
+      "https://drive.google.com/open?id=1xWhRFRaJ5zqjNGu2eDA20nxwUWus8znb",
+      "https://drive.google.com/open?id=167SX9ZB9faNt8kbkXwxRtJ4ZoBdUhnXY",
+      "https://drive.google.com/open?id=1yBnyvja0GkwkF7fpw7RDTh1MKAGt9ULt",
+      "https://drive.google.com/open?id=1BdR0lbI3zQ2AJsIXgQixWfARf3xsuZIQ"
     ],
     "seller": {
       "name": "Lippan Beauty",
       "phone": "+91 94381 14556",
-      "location": "Park Street, Kolkata",
+      "location": "Park Street, Kolkata"
+    }
   },
-  { 
+  {
     "id": "p8",
     "title": "Handcrafted Torans",
     "short": "Handcrafted decorative toran for elegant festive home décor.",
     "description": "Beautifully handcrafted torans designed by local artisans, featuring colorful beads and threads that add a festive touch and welcoming charm to your home entrance.",
     "price": "₹700-800",
     "photos": [
-      "https://drive.google.com/open?id=13905xXtlFkQxws3WoV5_mVEbQOVtIvvu", 
-      "https://drive.google.com/open?id=1ITVuSNHzGXcz7gJlK7QyZPih9bJmKfXN", 
-      "https://drive.google.com/open?id=1pr6N1kdnrxY96CsTI8xgAmolog1limQ1", 
-      "https://drive.google.com/open?id=1RyEGj9hoV-CXNIr1-R1ntOG-rJsuq6by", 
-      "https://drive.google.com/open?id=1MsBerwesQibxhWDSONbIfZ5xFrzbg_IU", 
-      "https://drive.google.com/open?id=1HLxQqU8hy-VII4kSTMXu_t7oyDsl0T1N", 
-      "https://drive.google.com/open?id=1_TDfRpxn78Jm2ACLssNwByf3av2Wfldv", 
-      "https://drive.google.com/open?id=1qXDE6wjm1wLqKBwyR9LOd2qRtxBCKX0k", 
-      "https://drive.google.com/open?id=1XZLn-DSkVGJGI3w3ipiu9nazM9rSE2MY",
+      "https://drive.google.com/open?id=13905xXtlFkQxws3WoV5_mVEbQOVtIvvu",
+      "https://drive.google.com/open?id=1ITVuSNHzGXcz7gJlK7QyZPih9bJmKfXN",
+      "https://drive.google.com/open?id=1pr6N1kdnrxY96CsTI8xgAmolog1limQ1",
+      "https://drive.google.com/open?id=1RyEGj9hoV-CXNIr1-R1ntOG-rJsuq6by",
+      "https://drive.google.com/open?id=1MsBerwesQibxhWDSONbIfZ5xFrzbg_IU",
+      "https://drive.google.com/open?id=1HLxQqU8hy-VII4kSTMXu_t7oyDsl0T1N",
+      "https://drive.google.com/open?id=1_TDfRpxn78Jm2ACLssNwByf3av2Wfldv",
+      "https://drive.google.com/open?id=1qXDE6wjm1wLqKBwyR9LOd2qRtxBCKX0k",
+      "https://drive.google.com/open?id=1XZLn-DSkVGJGI3w3ipiu9nazM9rSE2MY"
     ],
     "seller": {
       "name": "Bhalotia sales",
       "phone": "+91 86373 85423",
-      "location": "Munshi bazaar,Asansol",
+      "location": "Munshi bazaar, Asansol"
     }
   },
-  { 
+  {
     "id": "p7",
     "title": "PINTU ERTH POT SHOP",
-    "short": "decorative erthenwares",
-    "description": "Good looking pots, Can be used as home decoration, also great for storing various items",
+    "short": "Decorative earthenwares",
+    "description": "Good looking pots. Can be used as home decoration and are great for storing various items.",
     "price": "₹300",
     "photos": [
-      "https://www.google.com/maps/place/PINTU+ERTH+POT+SHOP/@22.5034828,88.3431436,3a,75y,25.21h,90t/data=!3m7!1e1!3m5!1sOMJlNd-jL_zt_g0SRwmJ9g!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DOMJlNd-jL_zt_g0SRwmJ9g%26yaw%3D25.214735!7i13312!8i6656!4m11!1m2!2m1!1searthen+pot!3m7!1s0x3a02710b6108f8cf:0x7419bba1de9f6905!8m2!3d22.5035344!4d88.3431949!10e5!15sCgtlYXJ0aGVuIHBvdFoNIgtlYXJ0aGVuIHBvdJIBDWdlbmVyYWxfc3RvcmWaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVTkNlV1IxVDJ4UlJSQUKqAUUQASoPIgtlYXJ0aGVuIHBvdCgAMh8QASIbCxW0TKcx8PLqQuU0xQbnn8PV3J0_XqjZ-a4IMg8QAiILZWFydGhlbiBwb3TgAQD6AQQIABAR!16s%2Fg%2F11tnnpbk6r?entry=ttu&g_ep=EgoyMDI1MTAyNi4wIKXMDSoASAFQAw%3D%3D#",
+      "https://www.google.com/maps/place/PINTU+ERTH+POT+SHOP/@22.5034828,88.3431436,3a,75y,25.21h,90t/data=!3m7!1e1!3m5!1sOMJlNd-jL_zt_g0SRwmJ9g!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2F..."
     ],
     "seller": {
       "name": "Pintu Ghorui",
       "phone": "+91 89727 67510",
-      "location": "9, Tollygunge Circular Rd, Tollygunge, Kolkata, West Bengal 700033",
+      "location": "9, Tollygunge Circular Rd, Tollygunge, Kolkata, West Bengal 700033"
     }
   },
-  { 
+  {
     "id": "p6",
     "title": "SITALA POT SUPPLIER",
-    "short": "Curved by hand, Varitey in shapes and sizes",
+    "short": "Curved by hand, variety in shapes and sizes",
     "description": "Small pottery workshop offering kitchen & decorative earthenware.",
     "price": "₹150 onwards",
     "photos": [
-      "https://lh3.googleusercontent.com/p/AF1QipN93asjICA6gMLzLXQzxtzWGz6MRr4wBkK7glqA=w408-h306-k-no",
+      "https://lh3.googleusercontent.com/p/AF1QipN93asjICA6gMLzLXQzxtzWGz6MRr4wBkK7glqA=w408-h306-k-no"
     ],
     "seller": {
       "name": "Saheb",
       "phone": "+91 79800 27023",
-      "location": "Thakurpukur - Bibirhat - Bakhrahat - Raipur Rd, Chak Manik, Muchisha, Raypur, West Bengal 743377",
+      "location": "Thakurpukur - Bibirhat - Bakhrahat - Raipur Rd, Chak Manik, Muchisha, Raypur, West Bengal 743377"
     }
   },
-  { 
+  {
     "id": "p5",
     "title": "Earthen Pot Dealer",
     "short": "Uniquely designed, colorful",
-    "description": "A traditional art of crafting earthen pots, matkas and clay cookwares that preserve Bengal`s rich rural pottery heritage",
+    "description": "A traditional art of crafting earthen pots, matkas and clay cookwares that preserve Bengal's rich rural pottery heritage.",
     "price": "₹100 onwards",
     "photos": [
       "https://content.jdmagicbox.com/v2/comp/kolkata/p9/033pxx33.xx33.090706092951.d2p9/catalogue/ganesh-trading-company-hatkhola-kolkata-earthen-pot-manufacturers-2kmdars-250.jpg",
-      "https://content.jdmagicbox.com/v2/comp/chennai/g8/044pxx44.xx44.210310111620.g8g8/catalogue/-d5ynaqkpvx.jpg",
+      "https://content.jdmagicbox.com/v2/comp/chennai/g8/044pxx44.xx44.210310111620.g8g8/catalogue/-d5ynaqkpvx.jpg"
     ],
     "seller": {
       "name": "Bhima Chandra Das",
       "phone": "Not listed",
-      "location": "Bonmali Sarkar Street, Hatkhola, Barasat, Kolkata region.",
+      "location": "Bonmali Sarkar Street, Hatkhola, Barasat, Kolkata region."
     }
   },
-  { 
+  {
     "id": "p4",
     "title": "Hand painted TERRACOTTA/CLAY pots",
     "short": "Clay/terracotta pots, painted designs.",
     "description": "A vibrant roadside stall in Rajdanga offering beautifully hand-painted terracotta pots and planters crafted by local artisans.",
-    "price": 150,
+    "price": "₹150",
     "photos": [
-      "https://im.whatshot.in/img/2018/Mar/img-20180313-114524-cropped-1521794411.jpg",
+      "https://im.whatshot.in/img/2018/Mar/img-20180313-114524-cropped-1521794411.jpg"
     ],
     "seller": {
       "name": "Madan Goswami",
       "phone": "Not listed",
-      "location": "1300 Rajdanga Main Road, Kolkata.",
-    }
-  },
-  {
-    "id": "p1",
-    "title": "Handcrafted Ceramic Vase",
-    "short": "Elegant glazed vase — perfect for flowers or decor",
-    "description": "A beautifully handcrafted ceramic vase made by local artisans. Each piece is unique. 10\" tall, food-safe glaze.",
-    "price": 2345,
-    "photos": [
-      "https://images.unsplash.com/photo-1560184897-6f34b9ddb20b?w=1200&q=80",
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&q=80"
-    ],
-    "seller": {
-      "name": "Maya Crafts",
-      "phone": "+91 98765 43210",
-      "location": "Jaipur, Rajasthan"
-    }
-  },
-  {
-    "id": "p2",
-    "title": "Woven Leather Tote",
-    "short": "Durable leather tote with internal pockets",
-    "description": "Full-grain leather, hand-stitched. Spacious interior with secure zip pocket.",
-    "price": 3450,
-    "photos": [
-      "https://images.unsplash.com/photo-1490367532201-b9bc1dc483f6?w=1200&q=80"
-    ],
-    "seller": {
-      "name": "Loft Goods",
-      "phone": "+91 91234 56789",
-      "location": "Mumbai, Maharashtra"
-    }
-  },
-  {
-    "id": "p3",
-    "title": "Organic Cotton Shirt",
-    "short": "Soft, breathable everyday shirt",
-    "description": "Made from 100% certified organic cotton. Pre-washed to reduce shrinkage. Available in multiple sizes.",
-    "price": 1299,
-    "photos": [
-      "https://images.unsplash.com/photo-1520975914104-9b0a8b4a6199?w=1200&q=80"
-    ],
-    "seller": {
-      "name": "Green Stitch",
-      "phone": "+91 99876 54321",
-      "location": "Bengaluru, Karnataka"
+      "location": "1300 Rajdanga Main Road, Kolkata."
     }
   }
 ]
