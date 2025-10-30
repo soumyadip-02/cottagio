@@ -30,8 +30,10 @@
       </nav>
     </header>
   <main>
-    <div class="products-header">
+    <div class="products-header" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
       <input type="text" id="search" placeholder="Search products by name or description" />
+      <!-- New location search -->
+      <input type="text" id="location-search" placeholder="Search by seller location (city, area...)" />
     </div>
   <div id="product-list" class="product-grid"></div>
     <div id="products-empty" class="muted" style="display:none; padding:18px; text-align:center">No products found.</div>
@@ -42,13 +44,19 @@
     document.addEventListener('DOMContentLoaded', () => {
       const container = document.getElementById('product-list');
       const searchInput = document.getElementById('search');
+      const locationInput = document.getElementById('location-search');
 
-      function renderProducts(filter = '') {
+      function renderProducts(filter = '', locationFilter = '') {
         container.innerHTML = '';
-        const list = (window.PRODUCTS || []).filter(product => 
-          product.title.toLowerCase().includes(filter.toLowerCase()) ||
-          (product.description || '').toLowerCase().includes(filter.toLowerCase())
-        );
+        const list = (window.PRODUCTS || []).filter(product => {
+          const titleMatch = (product.title || '').toLowerCase().includes(filter.toLowerCase());
+          const descMatch = (product.description || '').toLowerCase().includes(filter.toLowerCase());
+          const loc = (product.seller && product.seller.location) ? product.seller.location : '';
+          const locMatch = loc.toLowerCase().includes(locationFilter.toLowerCase());
+          // If a location filter is provided, require it; otherwise accept any location
+          const passesLocation = !locationFilter.trim() || locMatch;
+          return passesLocation && (titleMatch || descMatch);
+        });
 
         if(!list.length) {
           document.getElementById('products-empty').style.display = 'block';
@@ -61,7 +69,7 @@
           productCard.className = 'product-card';
           productCard.innerHTML = `
             <a href="product.html?id=${product.id}" class="product-link">
-              <div class="thumb"><img src="${product.photos[0]}" alt="${product.title}" onerror="this.style.display='none'"/></div>
+              <div class="thumb"><img src="${product.photos[0]||''}" alt="${product.title}" onerror="this.style.display='none'"/></div>
               <div class="info">
                 <div>
                   <h2>${product.title}</h2>
@@ -69,6 +77,7 @@
                 </div>
                 <div>
                   <p class="price">₹${product.price}</p>
+                  <p class="muted" style="font-size:0.9rem;margin-top:6px">${(product.seller && product.seller.location) ? product.seller.location : ''}</p>
                 </div>
               </div>
             </a>
@@ -78,7 +87,11 @@
       }
 
       searchInput.addEventListener('input', (e) => {
-        renderProducts(e.target.value);
+        renderProducts(e.target.value, locationInput.value);
+      });
+
+      locationInput.addEventListener('input', (e) => {
+        renderProducts(searchInput.value, e.target.value);
       });
 
       // Try rendering when PRODUCTS becomes available.
